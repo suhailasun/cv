@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Suhaila's Personal Site</title>
+  <link rel="icon" href="images/favicon.ico">
 
   <style>
     .main {
@@ -15,6 +16,32 @@
       opacity: 0.75;
       border: 1px dashed #EEEEEE;
       padding: 20px;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+    }
+
+    .skills {
+      display: inline-block;
+      width: 25%;
+      vertical-align: top;
+    }
+
+    .hobbies {
+      display: inline-block;
+      width: 25%;
+      vertical-align: top;
+    }
+
+    .contact {
+      display: inline-block;
+      width: 25%;
     }
 
     body {
@@ -32,6 +59,8 @@
     h1 {
       color: #F6C90E;
     }
+
+
   </style>
 
 </head>
@@ -39,41 +68,53 @@
 <body>
 
   <div class="main">
-    <h1>Suhaila Sundararajan</h1>
-    <p>
-      <em>Web Developer</em>
-    </p>
+
+    <div class="title">
+      <h1>Suhaila Sundararajan</h1>
+      <p>
+        <em>Web Developer</em>
+      </p>
+    </div>
 
     <hr />
 
-    <h3>Skills</h3>
-    <ul>
-      <li>JavaScript</li>
-      <li>HTML 5</li>
-      <li>CSS</li>
-      <li>Java</li>
-    </ul>
+    <div class="content">
 
-    <hr />
 
-    <h3>Hobbies</h3>
-    <ul>
-      <li>Homeschooling</li>
-      <li>Gardening</li>
-      <li>Running</li>
-      <li>Reading</li>
-    </ul>
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>JavaScript</li>
+          <li>HTML 5</li>
+          <li>CSS</li>
+          <li>Java</li>
+        </ul>
+      </div>
 
-    <hr />
+      <div class="hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+          <li>Home Education</li>
+          <li>Gardening</li>
+          <li>Running</li>
+          <li>Reading</li>
+        </ul>
+      </div>
 
-    <h3>Contact Me</h3>
-    <form action="mailto:suhaila.sun@gmail.com" method="post" enctype="text/plain">
-      <label>Name:</label><input type="text" name="yourname" value="" /><br />
-      <label>Email:</label><input type="email" name="youremail" value="" /><br />
-      <label>Message:</label><br />
-      <textarea name="yourmessage" rows="10" cols="30"></textarea><br />
-      <input type="submit">
-    </form>
+      <div class="contact">
+        <h3>Contact Me</h3>
+        <form action="mailto:suhaila.sun@gmail.com" method="post" enctype="text/plain">
+          <label for="yourname">Name:</label><input type="text" name="yourname" value="" /><br />
+          <label for="youremail">Email:</label><input type="email" name="youremail" value="" /><br />
+          <label for="yourmessage">Message:</label><br />
+          <textarea name="yourmessage" rows="10" cols="30"></textarea><br />
+          <input type="submit" value="Send me a message!">
+        </form>
+      </div>
+
+
+    </div>
+
   </div>
 
 </body>

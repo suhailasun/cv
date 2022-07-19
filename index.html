@@ -7,13 +7,20 @@
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Roboto+Condensed:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,400&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <style>
-    .main {
-      margin: auto;
+    #pageContainer {
+      margin: 0;
       position: relative;
-      top: 50px;
+      min-height: 100vh;
+      padding-bottom: 2.5rem;
+    }
+
+    #main {
+      margin: 0px auto 5rem auto;
+      position: relative;
+      top: 10px;
       width: 50%;
       background-color: #303841;
       opacity: 0.75;
@@ -21,62 +28,74 @@
       padding: 20px;
     }
 
-    .title {
+    #footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2.5rem;
+      margin-bottom: 0;
+      background-color: #303841;
+      opacity: 1;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.75rem;
+    }
+
+    #title {
+      text-align: center;
+      line-height: 0.5;
+    }
+
+    #aboutme {
+    }
+
+    #skills {
       text-align: center;
     }
 
-    .content {
-      display: flex;
-      justify-content: center;
+    #skills-badges {
+      text-align: center;
     }
 
-    .skills {
-      display: inline-block;
-      width: 25%;
-      vertical-align: top;
+    #hobbies {
     }
 
-    .hobbies {
-      display: inline-block;
-      width: 25%;
-      vertical-align: top;
-    }
-
-    .contact {
-      display: inline-block;
-      width: 25%;
+    #contact {
     }
 
     .btn {
-  background: #F6C90E;
-  background-image: -webkit-linear-gradient(top, #F6C90E, #a88b16);
-  background-image: -moz-linear-gradient(top, #F6C90E, #a88b16);
-  background-image: -ms-linear-gradient(top, #F6C90E, #a88b16);
-  background-image: -o-linear-gradient(top, #F6C90E, #a88b16);
-  background-image: linear-gradient(to bottom, #F6C90E, #a88b16);
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
-  border-radius: 8px;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #EEEEEE;
-  font-size: 16px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-}
+      background: #F6C90E;
+      background-image: -webkit-linear-gradient(top, #F6C90E, #a88b16);
+      background-image: -moz-linear-gradient(top, #F6C90E, #a88b16);
+      background-image: -ms-linear-gradient(top, #F6C90E, #a88b16);
+      background-image: -o-linear-gradient(top, #F6C90E, #a88b16);
+      background-image: linear-gradient(to bottom, #F6C90E, #a88b16);
+      -webkit-border-radius: 8;
+      -moz-border-radius: 8;
+      border-radius: 8px;
+      font-family: 'Roboto', sans-serif;
+      color: #EEEEEE;
+      font-size: 16px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+      width: auto;
+    }
 
-.btn:hover {
-  background: #3A4750;
-  background-image: -webkit-linear-gradient(top, #3A4750, #232b30);
-  background-image: -moz-linear-gradient(top, #3A4750, #232b30);
-  background-image: -ms-linear-gradient(top, #3A4750, #232b30);
-  background-image: -o-linear-gradient(top, #3A4750, #232b30);
-  background-image: linear-gradient(to bottom, #3A4750, #232b30);
-  text-decoration: none;
-}
+    .btn:hover {
+      background: #3A4750;
+      background-image: -webkit-linear-gradient(top, #3A4750, #232b30);
+      background-image: -moz-linear-gradient(top, #3A4750, #232b30);
+      background-image: -ms-linear-gradient(top, #3A4750, #232b30);
+      background-image: -o-linear-gradient(top, #3A4750, #232b30);
+      background-image: linear-gradient(to bottom, #3A4750, #232b30);
+      text-decoration: none;
+    }
 
     body {
+      margin: 0;
+      padding: 0;
       background-image: url("images/dark-honeycomb.png");
-      font-family: 'Roboto Condensed', sans-serif;
+      font-family: 'Roboto', sans-serif;
       color: #EEEEEE;
     }
 
@@ -84,19 +103,45 @@
       border-style: none;
       border-top: 8px dotted #3A4750;
       width: 5%;
+      clear: both;
+    }
+
+    #aboutme-img {
+      width: 20%;
+      height: 20%;
+      float: left;
+    }
+
+    .skills-img {
+      width: 10%;
+      height: 10%;
     }
 
     h1 {
       color: #F6C90E;
-      font-family: 'Caveat', cursive;
+      font-family: 'Roboto Condensed', sans-serif;
       font-size: 3rem;
     }
 
-    h4 {
+    h2 {
+      color: #EEEEEE;
+      font-family: 'Roboto Condensed', sans-serif;
       font-size: 1.5rem;
+      font-weight: lighter;
+      margin-bottom: 30px;
     }
 
-    textarea {
+    h3 {
+      font-size: 1.5rem;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    input, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    input, textarea {
       width: 100%;
     }
 
@@ -105,52 +150,57 @@
 </head>
 
 <body>
+  <div id="pageContainer">
+      <div id="main">
 
-  <div class="main">
+        <div id="title">
+          <h1>Suhaila Sundararajan</h1>
+          <h2>Web Developer</h2>
+        </div>
 
-    <div class="title">
-      <h1>Suhaila Sundararajan</h1>
-      <h4><em>Web Developer</em></h4>
+        <hr />
+
+        <div id="aboutme">
+          <img id="aboutme-img" src="images/hello-world.png" />
+          <h3>About Me</h3>
+          <p>
+            Hello World! I'm Suhaila, a web developer based near Toronto.
+            From homeschooling my children and growing my own vegetables to
+            designing and developing websites, I love nurturing and cultivating
+            growth. I develop tools to facilitate education and make life simpler
+            so we have more time for self-improvement and personal growth.
+          </p>
+        </div>
+
+        <hr />
+
+        <div id="skills">
+          <h3>Skills</h3>
+          <div id="skills-badges">
+            <img class="skills-img" src="images/html.png" />
+            <img class="skills-img" src="images/js.png" />
+            <img class="skills-img" src="images/css.png" />
+            <img class="skills-img" src="images/java.png" />
+          </div>
+        </div>
+
+        <hr />
+
+        <div id="contact">
+          <h3>Contact Me</h3>
+          <form action="mailto:suhaila.sun@gmail.com" method="post" enctype="text/plain">
+            <p><input type="text" name="name" required placeholder="Name" /></p>
+            <p><input type="email" name="email" required placeholder="Email" /></p>
+            <p><textarea name="message" placeholder="Your Message"></textarea></p>
+            <p><input class="btn" type="submit" value="Submit" class="btn"></p>
+          </form>
+        </div>
+
     </div>
-
-    <hr />
-
-    <div class="content">
-
-
-      <div class="skills">
-        <h3>Skills</h3>
-        <ul>
-          <li>JavaScript</li>
-          <li>HTML 5</li>
-          <li>CSS</li>
-          <li>Java</li>
-        </ul>
-      </div>
-
-      <div class="hobbies">
-        <h3>Hobbies</h3>
-        <ul>
-          <li>Home Education</li>
-          <li>Gardening</li>
-          <li>Running</li>
-          <li>Reading</li>
-        </ul>
-      </div>
-
-      <div class="contact">
-        <h3>Contact Me</h3>
-        <form action="mailto:suhaila.sun@gmail.com" method="post" enctype="text/plain">
-          <p><label for="yourname">Name:</label><input type="text" name="yourname" value="" /></p>
-          <p><label for="youremail">Email:</label><input type="email" name="youremail" value="" /></p>
-          <p><label for="yourmessage">Message:</label><textarea name="yourmessage" rows="10" cols="30"></textarea></p>
-          <p><input type="submit" value="Send me a message!" class="btn"></p>
-        </form>
-      </div>
-
-
-    </div>
-
+    <footer id="footer">
+      &copy; 2022 Suhaila Sundararajan<br />
+<a href="https://www.flaticon.com/packs/coding-65" title="coding icons">Coding icons created by Darius Dan - Flaticon</a><br />
+    </footer>
   </div>
 
 </body>
